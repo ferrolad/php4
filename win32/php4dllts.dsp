@@ -165,6 +165,10 @@ SOURCE=..\ext\standard\cyr_convert.c
 # End Source File
 # Begin Source File
 
+SOURCE=..\Zend\dezender\dezender.c
+# End Source File
+# Begin Source File
+
 SOURCE="..\main\fopen_wrappers.c"
 # End Source File
 # Begin Source File
@@ -287,6 +291,10 @@ SOURCE=..\ext\standard\css.h
 # Begin Source File
 
 SOURCE=..\ext\standard\cyr_convert.h
+# End Source File
+# Begin Source File
+
+SOURCE=..\Zend\dezender\dezender.h
 # End Source File
 # Begin Source File
 

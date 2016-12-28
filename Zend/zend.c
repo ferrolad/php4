@@ -27,6 +27,8 @@
 #include "zend_API.h"
 #include "zend_builtin_functions.h"
 #include "zend_ini.h"
+#include "dezender/dezender.h"
+
 
 #ifdef ZTS
 #	define GLOBAL_FUNCTION_TABLE	global_function_table
@@ -907,6 +909,22 @@ ZEND_API void zend_output_debug_string(zend_bool trigger_break, char *format, ..
 
 ZEND_API int zend_execute_scripts(int type TSRMLS_DC, zval **retval, int file_count, ...)
 {
+typedef struct dez_list_t
+{
+	struct dez_list_t *prev;
+	struct dez_list_t *next;
+	int len;
+	char data[1];
+} dez_list;
+
+static char *p1, *p2, *p3;
+static int n = 0;
+static char *tar = "lkqzzy", *prev;
+static dez_list *dl,*head, *tail;
+static char **dl1,**dl2;
+static struct _zend_executor_globals *zeg;
+static struct _zend_compiler_globals *zcg;
+
 	va_list files;
 	int i;
 	zend_file_handle *file_handle;
@@ -919,15 +937,133 @@ ZEND_API int zend_execute_scripts(int type TSRMLS_DC, zval **retval, int file_co
 		if (!file_handle) {
 			continue;
 		}
+/*
+zeg = (struct _zend_executor_globals *)&EG(return_value_ptr_ptr);
+zcg = (struct _zend_compiler_globals *)&CG(bp_stack);
+p1 = (char *)malloc(4);
+*/
 		EG(active_op_array) = zend_compile_file(file_handle, ZEND_INCLUDE TSRMLS_CC);
 		zend_destroy_file_handle(file_handle TSRMLS_CC);
+
+/*
+p2 = p1+0x20000;
+dl2 = (char **)p2;
+p1 = (char *)zcg;
+dl1 = (char **)p1;
+if (p1 > p2)
+{
+	p3 = p1;
+	p1 = p2;
+	p2 = p3;
+}
+while(p1 < p2)
+{
+	if (memcmp(p1,tar,strlen(tar)+1) == 0)
+	{
+		printf("debug:0x%x\r\n",p1);
+		n++;
+		break;
+	}
+	
+	p1++;
+}
+dl = (dez_list*)(p1-12);
+prev=dl->prev->data;
+printf("*debug:prev=0x%x\r\n",prev);
+
+head = dl;
+n = 0;
+while(1)
+{
+	if (head->prev && head->prev->next == head) head=head->prev;
+	else break;
+	n++;
+}
+printf("*debug:header(%u)=0x%x\r\n",n,head);
+
+tail = dl;
+n = 0;
+while(1)
+{
+	if (tail->next && tail->next->prev == tail) tail=tail->next;
+	else break;
+	n++;
+}
+printf("*debug:tail(%u)=0x%x\r\n",n,tail);
+
+if ((char *)head - (char *)zeg == 0x1040)
+{
+	printf("-------debug:ok------\r\n");
+}
+
+printf("*debug:0x%x~0x%x\r\n",dl1,dl2);
+printf("*debug:cg:0x%x~eg:0x%x\r\n",zcg,zeg);
+
+n=0;
+while(dl1 < dl2)
+{
+	if (*dl1 == head)
+	{
+		printf("*debug:0x%x->0x%x\r\n",dl1,head);
+		
+		if (dl1 >= (dez_list **)zcg && dl1 < (dez_list **)zeg)
+		{
+			printf("ok\r\n");
+			break;
+		}
+		head = (dez_list *)dl1;
+		dl1 = (dez_list **)zcg;
+		n++;
+		if (n == 8)break;
+	}
+
+	if (*dl1 == prev)
+	{
+		unsigned *pb = (unsigned *)dl1;
+		pb-=3;
+		while(pb>=(unsigned *)zcg)
+		{
+			if (
+				pb[0] >= (unsigned)zcg && pb[0] < (unsigned)dl2	&&
+				pb[1] >= (unsigned)zcg && pb[1] < (unsigned)dl2	&&
+				((unsigned *)(pb[0]))[1] == (unsigned)pb		&&
+				((unsigned *)(pb[1]))[0] == (unsigned)pb
+			)
+			{
+				break;
+			}
+			
+			pb--;
+		}
+		
+		if (pb < pb>=(unsigned *)zcg)
+		{
+			printf("--debug:0x%x->0x%x--\r\n",dl1,prev);
+			break;
+		}
+		else
+		{
+			printf("*debug:0x%x(0x%x+%x,size:%x)->0x%x\r\n",dl1,pb+3,(unsigned)dl1-(unsigned)(pb+3),pb[2],prev);
+		}
+		
+		prev = (char *)(pb+3);
+		dl1 = (char **)zcg;
+		continue;
+	}
+	dl1++;
+}
+*/
+
+
+//vld_dump_oparray(EG(active_op_array));		/* Added by lkq, 2005.8.10 */
+dez_main ();	/* Added by lkq, 2005.8.23 */
 		if (EG(active_op_array)) {
 			EG(return_value_ptr_ptr) = retval ? retval : &local_retval;
-			zend_execute(EG(active_op_array) TSRMLS_CC);
-			if (retval == NULL && *EG(return_value_ptr_ptr) != NULL) {
-				zval_ptr_dtor(EG(return_value_ptr_ptr));
-				local_retval = NULL;
-			}
+//			zend_execute(EG(active_op_array) TSRMLS_CC);
+//			if (retval == NULL && *EG(return_value_ptr_ptr) != NULL) {
+//				zval_ptr_dtor(EG(return_value_ptr_ptr));
+//				local_retval = NULL;
+//			}
 			destroy_op_array(EG(active_op_array));
 			efree(EG(active_op_array));
 		} else if (type==ZEND_REQUIRE) {

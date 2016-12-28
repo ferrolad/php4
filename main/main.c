@@ -971,7 +971,7 @@ void php_request_shutdown(void *dummy)
 	} zend_end_try();
 
 	zend_try {
-		sapi_send_headers(TSRMLS_C);
+//		sapi_send_headers(TSRMLS_C);		/* remarked by lkq. 2005.9.7 */
 	} zend_end_try();
 
 	if (PG(modules_activated)) zend_try {
