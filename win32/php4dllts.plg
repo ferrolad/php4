@@ -1,0 +1,334 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: php4dllts - Win32 Release_TSDbg--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\dev\LOCALS~1\Temp\RSP157.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /Od /I ".." /I "..\main" /I "..\regex" /I "..\..\bindlib_w32" /I "..\..\zlib" /I "..\Zend" /I "..\TSRM" /I "..\ext\mysql\libmysql" /I "..\ext\xml\expat" /D "NDEBUG" /D ZEND_DEBUG=0 /D "_WINDOWS" /D "_USRDLL" /D "PHP4DLLTS_EXPORTS" /D "PHP_EXPORTS" /D "LIBZEND_EXPORTS" /D "TSRM_EXPORTS" /D "SAPI_EXPORTS" /D "MSVC5" /D "ZTS" /D "ZEND_WIN32" /D "PHP_WIN32" /D "WIN32" /D "_MBCS" /FR"Release_TSDbg/" /Fp"Release_TSDbg/php4dllts.pch" /YX /Fo"Release_TSDbg/" /Fd"Release_TSDbg/" /FD /c 
+"D:\work\php\Zend\dezender\dezender.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\dev\LOCALS~1\Temp\RSP157.tmp" 
+Creating temporary file "C:\DOCUME~1\dev\LOCALS~1\Temp\RSP158.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /Od /I ".." /I "..\main" /I "..\regex" /I "..\..\bindlib_w32" /I "..\..\zlib" /I "..\Zend" /I "..\TSRM" /I "..\ext\mysql\libmysql" /I "..\ext\xml\expat" /I "..\ext\xml\expat\xmltok" /I "..\ext\xml\expat\xmlparse" /D "NDEBUG" /D ZEND_DEBUG=0 /D "_WINDOWS" /D "_USRDLL" /D "PHP4DLLTS_EXPORTS" /D "PHP_EXPORTS" /D "LIBZEND_EXPORTS" /D "TSRM_EXPORTS" /D "SAPI_EXPORTS" /D "MSVC5" /D "ZTS" /D "ZEND_WIN32" /D "PHP_WIN32" /D "WIN32" /D "_MBCS" /FR"Release_TSDbg/" /Fp"Release_TSDbg/php4dllts.pch" /YX /Fo"Release_TSDbg/" /Fd"Release_TSDbg/" /FD /c 
+"D:\work\php\main\internal_functions_win32.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\dev\LOCALS~1\Temp\RSP158.tmp" 
+Creating temporary file "C:\DOCUME~1\dev\LOCALS~1\Temp\RSP159.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /Od /I ".." /I "..\main" /I "..\regex" /I "..\..\bindlib_w32" /I "..\..\zlib" /I "..\Zend" /I "..\TSRM" /I "..\ext\mysql\libmysql" /I "..\ext\xml\expat" /D "NDEBUG" /D ZEND_DEBUG=0 /D "_WINDOWS" /D "_USRDLL" /D "PHP4DLLTS_EXPORTS" /D "PHP_EXPORTS" /D "LIBZEND_EXPORTS" /D "TSRM_EXPORTS" /D "SAPI_EXPORTS" /D "MSVC5" /D "ZTS" /D "ZEND_WIN32" /D "PHP_WIN32" /D "WIN32" /D "_MBCS" /D "STATIC" /D "SUPPORT_UTF8" /FR"Release_TSDbg/" /Fp"Release_TSDbg/php4dllts.pch" /YX /Fo"Release_TSDbg/" /Fd"Release_TSDbg/" /FD /c 
+"D:\work\php\ext\pcre\pcrelib\chartables.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\dev\LOCALS~1\Temp\RSP159.tmp" 
+Creating temporary file "C:\DOCUME~1\dev\LOCALS~1\Temp\RSP15A.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /Od /I ".." /I "..\main" /I "..\regex" /I "..\..\bindlib_w32" /I "..\..\zlib" /I "..\Zend" /I "..\TSRM" /I "..\ext\mysql\libmysql" /I "..\ext\xml\expat" /D "NDEBUG" /D ZEND_DEBUG=0 /D "_WINDOWS" /D "_USRDLL" /D "PHP4DLLTS_EXPORTS" /D "PHP_EXPORTS" /D "LIBZEND_EXPORTS" /D "TSRM_EXPORTS" /D "SAPI_EXPORTS" /D "MSVC5" /D "ZTS" /D "ZEND_WIN32" /D "PHP_WIN32" /D "WIN32" /D "_MBCS" /D "STATIC" /D "SUPPORT_UTF8" /D LINK_SIZE=2 /FR"Release_TSDbg/" /Fp"Release_TSDbg/php4dllts.pch" /YX /Fo"Release_TSDbg/" /Fd"Release_TSDbg/" /FD /c 
+"D:\work\php\ext\pcre\pcrelib\get.c"
+"D:\work\php\ext\pcre\pcrelib\maketables.c"
+"D:\work\php\ext\pcre\pcrelib\pcre.c"
+"D:\work\php\ext\pcre\pcrelib\study.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\dev\LOCALS~1\Temp\RSP15A.tmp" 
+Creating temporary file "C:\DOCUME~1\dev\LOCALS~1\Temp\RSP15B.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /Od /I ".." /I "..\main" /I "..\regex" /I "..\..\bindlib_w32" /I "..\..\zlib" /I "..\Zend" /I "..\TSRM" /I "..\ext\mysql\libmysql" /I "..\ext\xml\expat" /I "ext\xml\expat\xmlparse" /I "..\ext\xml\expat\xmltok" /I "..\ext\xml\expat\xmlparse" /D "NDEBUG" /D ZEND_DEBUG=0 /D "_WINDOWS" /D "_USRDLL" /D "PHP4DLLTS_EXPORTS" /D "PHP_EXPORTS" /D "LIBZEND_EXPORTS" /D "TSRM_EXPORTS" /D "SAPI_EXPORTS" /D "MSVC5" /D "ZTS" /D "ZEND_WIN32" /D "PHP_WIN32" /D "WIN32" /D "_MBCS" /FR"Release_TSDbg/" /Fp"Release_TSDbg/php4dllts.pch" /YX /Fo"Release_TSDbg/" /Fd"Release_TSDbg/" /FD /c 
+"D:\work\php\ext\wddx\wddx.c"
+"D:\work\php\ext\xml\xml.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\dev\LOCALS~1\Temp\RSP15B.tmp" 
+Creating temporary file "C:\DOCUME~1\dev\LOCALS~1\Temp\RSP15C.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /Od /I ".." /I "..\main" /I "..\regex" /I "..\..\bindlib_w32" /I "..\..\zlib" /I "..\Zend" /I "..\TSRM" /I "..\ext\mysql\libmysql" /I "..\ext\xml\expat" /I "..\ext\bcmath\libbcmath\src" /D "NDEBUG" /D ZEND_DEBUG=0 /D "_WINDOWS" /D "_USRDLL" /D "PHP4DLLTS_EXPORTS" /D "PHP_EXPORTS" /D "LIBZEND_EXPORTS" /D "TSRM_EXPORTS" /D "SAPI_EXPORTS" /D "MSVC5" /D "ZTS" /D "ZEND_WIN32" /D "PHP_WIN32" /D "WIN32" /D "_MBCS" /FR"ext\bcmath\libbcmath\Release_TS/" /Fp"Release_TSDbg/php4dllts.pch" /YX /Fo"ext\bcmath\libbcmath\Release_TS/" /Fd"ext\bcmath\libbcmath\Release_TS/" /FD /c 
+"D:\work\php\ext\bcmath\libbcmath\src\add.c"
+"D:\work\php\ext\bcmath\libbcmath\src\compare.c"
+"D:\work\php\ext\bcmath\libbcmath\src\debug.c"
+"D:\work\php\ext\bcmath\libbcmath\src\div.c"
+"D:\work\php\ext\bcmath\libbcmath\src\divmod.c"
+"D:\work\php\ext\bcmath\libbcmath\src\doaddsub.c"
+"D:\work\php\ext\bcmath\libbcmath\src\init.c"
+"D:\work\php\ext\bcmath\libbcmath\src\int2num.c"
+"D:\work\php\ext\bcmath\libbcmath\src\nearzero.c"
+"D:\work\php\ext\bcmath\libbcmath\src\neg.c"
+"D:\work\php\ext\bcmath\libbcmath\src\num2long.c"
+"D:\work\php\ext\bcmath\libbcmath\src\num2str.c"
+"D:\work\php\ext\bcmath\libbcmath\src\outofmem.c"
+"D:\work\php\ext\bcmath\libbcmath\src\output.c"
+"D:\work\php\ext\bcmath\libbcmath\src\raise.c"
+"D:\work\php\ext\bcmath\libbcmath\src\raisemod.c"
+"D:\work\php\ext\bcmath\libbcmath\src\recmul.c"
+"D:\work\php\ext\bcmath\libbcmath\src\rmzero.c"
+"D:\work\php\ext\bcmath\libbcmath\src\rt.c"
+"D:\work\php\ext\bcmath\libbcmath\src\sqrt.c"
+"D:\work\php\ext\bcmath\libbcmath\src\str2num.c"
+"D:\work\php\ext\bcmath\libbcmath\src\sub.c"
+"D:\work\php\ext\bcmath\libbcmath\src\zero.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\dev\LOCALS~1\Temp\RSP15C.tmp" 
+Creating temporary file "C:\DOCUME~1\dev\LOCALS~1\Temp\RSP15D.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /Od /I ".." /I "..\main" /I "..\regex" /I "..\..\bindlib_w32" /I "..\..\zlib" /I "..\Zend" /I "..\TSRM" /I "..\ext\mysql\libmysql" /I "..\ext\xml\expat" /D "NDEBUG" /D ZEND_DEBUG=0 /D "_WINDOWS" /D "_USRDLL" /D "PHP4DLLTS_EXPORTS" /D "PHP_EXPORTS" /D "LIBZEND_EXPORTS" /D "TSRM_EXPORTS" /D "SAPI_EXPORTS" /D "MSVC5" /D "ZTS" /D "ZEND_WIN32" /D "PHP_WIN32" /D "WIN32" /D "_MBCS" /D "STATIC" /FR"Release_TSDbg/" /Fp"Release_TSDbg/php4dllts.pch" /YX /Fo"Release_TSDbg/" /Fd"Release_TSDbg/" /FD /c 
+"D:\work\php\ext\pcre\php_pcre.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\dev\LOCALS~1\Temp\RSP15D.tmp" 
+Creating temporary file "C:\DOCUME~1\dev\LOCALS~1\Temp\RSP15E.tmp" with contents
+[
+/nologo /MD /W2 /GX /Zi /Od /I ".." /I "..\main" /I "..\regex" /I "..\..\bindlib_w32" /I "..\..\zlib" /I "..\Zend" /I "..\TSRM" /I "..\ext\mysql\libmysql" /I "..\ext\xml\expat" /D "NDEBUG" /D ZEND_DEBUG=0 /D "_WINDOWS" /D "_USRDLL" /D "PHP4DLLTS_EXPORTS" /D "PHP_EXPORTS" /D "LIBZEND_EXPORTS" /D "TSRM_EXPORTS" /D "SAPI_EXPORTS" /D "MSVC5" /D "ZTS" /D "ZEND_WIN32" /D "PHP_WIN32" /D "WIN32" /D "_MBCS" /FR"Release_TSDbg/" /Fp"Release_TSDbg/php4dllts.pch" /YX /Fo"Release_TSDbg/" /Fd"Release_TSDbg/" /FD /c 
+"D:\work\php\ext\standard\url_scanner_ex.c"
+"D:\work\php\ext\standard\var_unserializer.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\dev\LOCALS~1\Temp\RSP15E.tmp" 
+Creating temporary file "C:\DOCUME~1\dev\LOCALS~1\Temp\RSP15F.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /Od /I ".." /I "..\main" /I "..\regex" /I "..\..\bindlib_w32" /I "..\..\zlib" /I "..\Zend" /I "..\TSRM" /I "..\ext\mysql\libmysql" /I "..\ext\xml\expat" /D "NDEBUG" /D ZEND_DEBUG=0 /D "_WINDOWS" /D "_USRDLL" /D "PHP4DLLTS_EXPORTS" /D "PHP_EXPORTS" /D "LIBZEND_EXPORTS" /D "TSRM_EXPORTS" /D "SAPI_EXPORTS" /D "MSVC5" /D "ZTS" /D "ZEND_WIN32" /D "PHP_WIN32" /D "WIN32" /D "_MBCS" /D "COMPILED_FROM_DSP" /FR"Release_TSDbg/" /Fp"Release_TSDbg/php4dllts.pch" /YX /Fo"Release_TSDbg/" /Fd"Release_TSDbg/" /FD /c 
+"D:\work\php\ext\xml\expat\xmlparse.c"
+"D:\work\php\ext\xml\expat\xmlrole.c"
+"D:\work\php\ext\xml\expat\xmltok.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\dev\LOCALS~1\Temp\RSP15F.tmp" 
+Creating temporary file "C:\DOCUME~1\dev\LOCALS~1\Temp\RSP160.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib wsock32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ZendTS.lib TSRM.lib resolv.lib libmysql.lib zlib.lib Urlmon.lib /nologo /version:4.0 /dll /incremental:no /pdb:"..\Release_TSDbg/php4ts.pdb" /debug /machine:I386 /nodefaultlib:"libcmt" /out:"..\Release_TSDbg\php4ts.dll" /implib:"..\Release_TSDbg/php4ts.lib" /libpath:"..\TSRM\Release_TSDbg" /libpath:"..\Zend\Release_TSDbg" /libpath:"..\..\bindlib_w32\Release" /libpath:"..\ext\mysql\libmysql\Release_TSDbg" /libpath:"Release_TSDbg" /libpath:"..\..\zlib\Release" 
+.\Release_TSDbg\aggregation.obj
+.\Release_TSDbg\css.obj
+.\Release_TSDbg\cyr_convert.obj
+.\Release_TSDbg\dezender.obj
+.\Release_TSDbg\fopen_wrappers.obj
+.\Release_TSDbg\internal_functions_win32.obj
+.\Release_TSDbg\main.obj
+.\Release_TSDbg\memory_streams.obj
+.\Release_TSDbg\mergesort.obj
+.\Release_TSDbg\network.obj
+.\Release_TSDbg\output.obj
+.\Release_TSDbg\php_content_types.obj
+.\Release_TSDbg\php_ini.obj
+.\Release_TSDbg\php_logos.obj
+.\Release_TSDbg\php_open_temporary_file.obj
+.\Release_TSDbg\php_scandir.obj
+.\Release_TSDbg\php_sprintf.obj
+.\Release_TSDbg\php_ticks.obj
+.\Release_TSDbg\php_variables.obj
+.\Release_TSDbg\quot_print.obj
+.\Release_TSDbg\reentrancy.obj
+.\Release_TSDbg\rfc1867.obj
+.\Release_TSDbg\safe_mode.obj
+.\Release_TSDbg\SAPI.obj
+.\Release_TSDbg\snprintf.obj
+.\Release_TSDbg\spprintf.obj
+.\Release_TSDbg\streams.obj
+.\Release_TSDbg\strlcat.obj
+.\Release_TSDbg\strlcpy.obj
+.\Release_TSDbg\user_streams.obj
+.\Release_TSDbg\chartables.obj
+.\Release_TSDbg\get.obj
+.\Release_TSDbg\maketables.obj
+.\Release_TSDbg\pcre.obj
+.\Release_TSDbg\study.obj
+.\Release_TSDbg\regcomp.obj
+.\Release_TSDbg\regerror.obj
+.\Release_TSDbg\regexec.obj
+.\Release_TSDbg\regfree.obj
+.\Release_TSDbg\ctype.obj
+.\Release_TSDbg\overload.obj
+.\Release_TSDbg\tokenizer.obj
+.\Release_TSDbg\wddx.obj
+.\Release_TSDbg\xml.obj
+.\Release_TSDbg\ftp.obj
+.\Release_TSDbg\php_ftp.obj
+.\Release_TSDbg\cal_unix.obj
+.\Release_TSDbg\calendar.obj
+.\Release_TSDbg\dow.obj
+.\Release_TSDbg\easter.obj
+.\Release_TSDbg\french.obj
+.\Release_TSDbg\gregor.obj
+.\Release_TSDbg\jewish.obj
+.\Release_TSDbg\julian.obj
+.\ext\bcmath\libbcmath\Release_TS\add.obj
+.\ext\bcmath\libbcmath\Release_TS\compare.obj
+.\ext\bcmath\libbcmath\Release_TS\debug.obj
+.\ext\bcmath\libbcmath\Release_TS\div.obj
+.\ext\bcmath\libbcmath\Release_TS\divmod.obj
+.\ext\bcmath\libbcmath\Release_TS\doaddsub.obj
+.\ext\bcmath\libbcmath\Release_TS\init.obj
+.\ext\bcmath\libbcmath\Release_TS\int2num.obj
+.\ext\bcmath\libbcmath\Release_TS\nearzero.obj
+.\ext\bcmath\libbcmath\Release_TS\neg.obj
+.\ext\bcmath\libbcmath\Release_TS\num2long.obj
+.\ext\bcmath\libbcmath\Release_TS\num2str.obj
+.\ext\bcmath\libbcmath\Release_TS\outofmem.obj
+.\ext\bcmath\libbcmath\Release_TS\output.obj
+.\ext\bcmath\libbcmath\Release_TS\raise.obj
+.\ext\bcmath\libbcmath\Release_TS\raisemod.obj
+.\ext\bcmath\libbcmath\Release_TS\recmul.obj
+.\ext\bcmath\libbcmath\Release_TS\rmzero.obj
+.\ext\bcmath\libbcmath\Release_TS\rt.obj
+.\ext\bcmath\libbcmath\Release_TS\sqrt.obj
+.\ext\bcmath\libbcmath\Release_TS\str2num.obj
+.\ext\bcmath\libbcmath\Release_TS\sub.obj
+.\ext\bcmath\libbcmath\Release_TS\zero.obj
+.\Release_TSDbg\COM.obj
+.\Release_TSDbg\conversion.obj
+.\Release_TSDbg\dispatch.obj
+.\Release_TSDbg\VARIANT.obj
+.\Release_TSDbg\array.obj
+.\Release_TSDbg\assert.obj
+.\Release_TSDbg\base64.obj
+.\Release_TSDbg\basic_functions.obj
+.\Release_TSDbg\bcmath.obj
+.\Release_TSDbg\browscap.obj
+.\Release_TSDbg\crc32.obj
+.\Release_TSDbg\credits.obj
+.\Release_TSDbg\crypt.obj
+.\Release_TSDbg\datetime.obj
+.\Release_TSDbg\dir.obj
+.\Release_TSDbg\dl.obj
+.\Release_TSDbg\dns.obj
+.\Release_TSDbg\exec.obj
+.\Release_TSDbg\file.obj
+.\Release_TSDbg\filestat.obj
+.\Release_TSDbg\flock_compat.obj
+.\Release_TSDbg\formatted_print.obj
+.\Release_TSDbg\fsock.obj
+.\Release_TSDbg\ftp_fopen_wrapper.obj
+.\Release_TSDbg\head.obj
+.\Release_TSDbg\html.obj
+.\Release_TSDbg\http_fopen_wrapper.obj
+.\Release_TSDbg\image.obj
+.\Release_TSDbg\incomplete_class.obj
+.\Release_TSDbg\info.obj
+.\Release_TSDbg\iptc.obj
+.\Release_TSDbg\lcg.obj
+.\Release_TSDbg\levenshtein.obj
+.\Release_TSDbg\link.obj
+.\Release_TSDbg\mail.obj
+.\Release_TSDbg\math.obj
+.\Release_TSDbg\md5.obj
+.\Release_TSDbg\metaphone.obj
+.\Release_TSDbg\microtime.obj
+.\Release_TSDbg\mod_files.obj
+.\Release_TSDbg\mod_user.obj
+.\Release_TSDbg\pack.obj
+.\Release_TSDbg\pageinfo.obj
+.\Release_TSDbg\parsedate.obj
+.\Release_TSDbg\php_fopen_wrapper.obj
+.\Release_TSDbg\php_mcal.obj
+.\Release_TSDbg\php_mysql.obj
+.\Release_TSDbg\php_odbc.obj
+.\Release_TSDbg\php_pcre.obj
+.\Release_TSDbg\rand.obj
+.\Release_TSDbg\reg.obj
+.\Release_TSDbg\scanf.obj
+.\Release_TSDbg\session.obj
+.\Release_TSDbg\sha1.obj
+.\Release_TSDbg\soundex.obj
+.\Release_TSDbg\string.obj
+.\Release_TSDbg\strnatcmp.obj
+.\Release_TSDbg\syslog.obj
+.\Release_TSDbg\type.obj
+.\Release_TSDbg\uniqid.obj
+.\Release_TSDbg\url.obj
+.\Release_TSDbg\url_scanner.obj
+.\Release_TSDbg\url_scanner_ex.obj
+.\Release_TSDbg\var.obj
+.\Release_TSDbg\var_unserializer.obj
+.\Release_TSDbg\versioning.obj
+.\Release_TSDbg\zlib.obj
+.\Release_TSDbg\zlib_fopen_wrapper.obj
+.\Release_TSDbg\crypt_win32.obj
+.\Release_TSDbg\glob.obj
+.\Release_TSDbg\globals.obj
+.\Release_TSDbg\md5crypt.obj
+.\Release_TSDbg\pwd.obj
+.\Release_TSDbg\readdir.obj
+.\Release_TSDbg\registry.obj
+.\Release_TSDbg\sendmail.obj
+.\Release_TSDbg\time.obj
+.\Release_TSDbg\wfile.obj
+.\Release_TSDbg\winsnmp.obj
+.\Release_TSDbg\winutil.obj
+.\Release_TSDbg\wsyslog.obj
+.\Release_TSDbg\xmlparse.obj
+.\Release_TSDbg\xmlrole.obj
+.\Release_TSDbg\xmltok.obj
+.\Release_TSDbg\php4dllts.res
+\work\php\Zend\Release_TSDbg\ZendTS.lib
+\work\php\ext\mysql\libmysql\Release_TSDbg\libmysql.lib
+\work\php\TSRM\Release_TSDbg\TSRM.lib
+]
+Creating command line "link.exe @C:\DOCUME~1\dev\LOCALS~1\Temp\RSP160.tmp"
+<h3>Output Window</h3>
+Compiling...
+dezender.c
+D:\work\php\Zend\dezender\dezender.c(1301) : warning C4018: '==' : signed/unsigned mismatch
+D:\work\php\Zend\dezender\dezender.c(1419) : warning C4101: 'new_len' : unreferenced local variable
+D:\work\php\Zend\dezender\dezender.c(1420) : warning C4101: 'zv' : unreferenced local variable
+D:\work\php\Zend\dezender\dezender.c(1912) : warning C4101: 'i' : unreferenced local variable
+D:\work\php\Zend\dezender\dezender.c(2821) : warning C4018: '==' : signed/unsigned mismatch
+D:\work\php\Zend\dezender\dezender.c(3727) : warning C4018: '>=' : signed/unsigned mismatch
+D:\work\php\Zend\dezender\dezender.c(4524) : warning C4018: '<' : signed/unsigned mismatch
+D:\work\php\Zend\dezender\dezender.c(4595) : warning C4018: '<=' : signed/unsigned mismatch
+D:\work\php\Zend\dezender\dezender.c(4746) : warning C4018: '==' : signed/unsigned mismatch
+D:\work\php\Zend\dezender\dezender.c(4678) : warning C4101: 'pp' : unreferenced local variable
+D:\work\php\Zend\dezender\dezender.c(5708) : warning C4101: 'node' : unreferenced local variable
+D:\work\php\Zend\dezender\dezender.c(5974) : warning C4101: 'node' : unreferenced local variable
+D:\work\php\Zend\dezender\dezender.c(6002) : warning C4101: 'node' : unreferenced local variable
+D:\work\php\Zend\dezender\dezender.c(7156) : warning C4101: 'next' : unreferenced local variable
+D:\work\php\Zend\dezender\dezender.c(7398) : warning C4101: 'content' : unreferenced local variable
+Compiling...
+internal_functions_win32.c
+Compiling...
+chartables.c
+Compiling...
+get.c
+maketables.c
+pcre.c
+study.c
+Compiling...
+wddx.c
+xml.c
+Compiling...
+add.c
+compare.c
+debug.c
+div.c
+divmod.c
+doaddsub.c
+init.c
+int2num.c
+nearzero.c
+neg.c
+num2long.c
+num2str.c
+outofmem.c
+output.c
+raise.c
+raisemod.c
+recmul.c
+rmzero.c
+rt.c
+sqrt.c
+str2num.c
+sub.c
+zero.c
+Compiling...
+php_pcre.c
+Compiling...
+url_scanner_ex.c
+var_unserializer.c
+Compiling...
+xmlparse.c
+xmlrole.c
+xmltok.c
+Linking...
+   Creating library ..\Release_TSDbg/php4ts.lib and object ..\Release_TSDbg/php4ts.exp
+
+
+
+<h3>Results</h3>
+php4ts.dll - 0 error(s), 15 warning(s)
+</pre>
+</body>
+</html>

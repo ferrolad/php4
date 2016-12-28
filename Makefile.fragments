@@ -1,0 +1,143 @@
+$(SAPI_CLI_PATH): $(PHP_GLOBAL_OBJS) $(PHP_CLI_OBJS)
+	$(BUILD_CLI)
+
+install-cli: $(SAPI_CLI_PATH)
+	@echo "Installing PHP CLI binary:        $(INSTALL_ROOT)$(bindir)/"
+	@$(INSTALL_CLI)
+	@echo "Installing PHP CLI man page:      $(INSTALL_ROOT)$(mandir)/man1/"
+	@$(mkinstalldirs) $(INSTALL_ROOT)$(mandir)/man1
+	@$(INSTALL_DATA) sapi/cli/php.1 $(INSTALL_ROOT)$(mandir)/man1/php.1
+$(SAPI_CGI_PATH): $(PHP_GLOBAL_OBJS) $(PHP_SAPI_OBJS)
+	$(BUILD_CGI)
+
+/home/lkq/php/ext/standard/parsedate.c: /home/lkq/php/ext/standard/parsedate.y
+
+/home/lkq/php/ext/standard/var_unserializer.c: /home/lkq/php/ext/standard/var_unserializer.re
+	$(RE2C) -b /home/lkq/php/ext/standard/var_unserializer.re > $@
+
+/home/lkq/php/ext/standard/url_scanner_ex.c: /home/lkq/php/ext/standard/url_scanner_ex.re
+	$(RE2C) -b /home/lkq/php/ext/standard/url_scanner_ex.re > $@
+
+ext/standard/info.lo: ext/standard/../../main/build-defs.h
+Zend/zend_language_parser.h:
+ext/tokenizer/tokenizer.lo: Zend/zend_language_parser.h
+# -*- makefile -*-
+
+peardir=$(PEAR_INSTALLDIR)
+
+# Skip all php.ini files altogether
+PEAR_INSTALL_FLAGS = -n -dshort_open_tag=0 -dsafe_mode=0
+
+install-pear-installer: $(top_builddir)/sapi/cli/php
+	@$(top_builddir)/sapi/cli/php $(PEAR_INSTALL_FLAGS) /home/lkq/php/pear/install-pear.php -d "$(peardir)" -b "$(bindir)" /home/lkq/php/pear/package-*.xml
+
+install-pear-packages: $(top_builddir)/sapi/cli/php
+	@$(top_builddir)/sapi/cli/php $(PEAR_INSTALL_FLAGS) /home/lkq/php/pear/install-pear.php -d "$(peardir)" -b "$(bindir)" /home/lkq/php/pear/packages/*.tar
+
+install-pear:
+	@echo "Installing PEAR environment:      $(INSTALL_ROOT)$(peardir)/"
+	@if $(mkinstalldirs) $(INSTALL_ROOT)$(peardir); then \
+		$(MAKE) -s install-pear-installer install-pear-packages; \
+	else \
+		cat /home/lkq/php/pear/install-pear.txt; \
+		exit 5; \
+	fi
+
+
+#
+# Build environment install
+#
+
+phpincludedir = $(includedir)/php
+phpbuilddir = $(prefix)/lib/php/build
+
+BUILD_FILES = \
+	scripts/phpize.m4 \
+	build/mkdep.awk \
+	build/scan_makefile_in.awk \
+	build/libtool.m4 \
+	Makefile.global \
+	acinclude.m4 \
+	ltmain.sh
+
+BUILD_FILES_EXEC = \
+	build/shtool \
+	config.guess \
+	config.sub
+
+bin_SCRIPTS = phpize php-config
+bin_src_SCRIPTS = phpextdist
+
+install-build:
+	@echo "Installing build environment:     $(INSTALL_ROOT)$(phpbuilddir)/"
+	@$(mkinstalldirs) $(INSTALL_ROOT)$(phpbuilddir) $(INSTALL_ROOT)$(bindir) && \
+	(cd $(top_srcdir) && \
+	$(INSTALL) $(BUILD_FILES_EXEC) $(INSTALL_ROOT)$(phpbuilddir) && \
+	$(INSTALL_DATA) $(BUILD_FILES) $(INSTALL_ROOT)$(phpbuilddir))
+
+HEADER_DIRS = \
+	/ \
+	Zend \
+	TSRM \
+	ext/standard \
+	ext/session \
+	ext/xml \
+	ext/xml/expat \
+	main \
+	ext/mbstring \
+	ext/mbstring/libmbfl \
+	ext/mbstring/libmbfl/mbfl \
+	ext/pgsql \
+	regex
+
+install-headers:
+	-@for i in $(HEADER_DIRS); do \
+		paths="$$paths $(INSTALL_ROOT)$(phpincludedir)/$$i"; \
+	done; \
+	$(mkinstalldirs) $$paths && \
+	echo "Installing header files:          $(INSTALL_ROOT)$(phpincludedir)/" && \
+	for i in $(HEADER_DIRS); do \
+		(cd $(top_srcdir)/$$i && $(INSTALL_DATA) *.h $(INSTALL_ROOT)$(phpincludedir)/$$i; \
+		cd $(top_builddir)/$$i && $(INSTALL_DATA) *.h $(INSTALL_ROOT)$(phpincludedir)/$$i) 2>/dev/null || true; \
+	done; \
+	cd $(top_srcdir)/sapi/embed && $(INSTALL_DATA) *.h $(INSTALL_ROOT)$(phpincludedir)/main
+
+install-programs: scripts/phpize scripts/php-config 
+	@echo "Installing helper programs:       $(INSTALL_ROOT)$(bindir)/"
+	@for prog in $(bin_SCRIPTS); do \
+		echo "  program: $(program_prefix)$$prog$(program_suffix)"; \
+		$(INSTALL) -m 755 scripts/$$prog $(INSTALL_ROOT)$(bindir)/$(program_prefix)$$prog$(program_suffix); \
+	done
+	@for prog in $(bin_src_SCRIPTS); do \
+		echo "  program: $(program_prefix)$$prog$(program_suffix)"; \
+		$(INSTALL) -m 755 $(top_srcdir)/scripts/$$prog $(INSTALL_ROOT)$(bindir)/$(program_prefix)$$prog$(program_suffix); \
+	done
+
+scripts/phpize: /home/lkq/php/scripts/phpize.in $(top_builddir)/config.status
+	(CONFIG_FILES=$@ CONFIG_HEADERS= $(top_builddir)/config.status)
+
+scripts/php-config: /home/lkq/php/scripts/php-config.in $(top_builddir)/config.status
+	(CONFIG_FILES=$@ CONFIG_HEADERS= $(top_builddir)/config.status)
+
+#
+# Zend
+#
+
+Zend/zend_language_scanner.lo: Zend/zend_language_parser.h
+Zend/zend_ini_scanner.lo: Zend/zend_ini_parser.h
+
+Zend/zend_language_scanner.c: /home/lkq/php/Zend/zend_language_scanner.l
+	$(LEX) -Pzend -S/home/lkq/php/Zend/flex.skl -o$@ -i /home/lkq/php/Zend/zend_language_scanner.l
+
+Zend/zend_language_parser.h: Zend/zend_language_parser.c
+Zend/zend_language_parser.c: /home/lkq/php/Zend/zend_language_parser.y
+	$(YACC) -p zend -v -d /home/lkq/php/Zend/zend_language_parser.y -o $@
+
+Zend/zend_ini_parser.h: Zend/zend_ini_parser.c
+Zend/zend_ini_parser.c: /home/lkq/php/Zend/zend_ini_parser.y
+	$(YACC) -p ini_ -v -d /home/lkq/php/Zend/zend_ini_parser.y -o $@
+
+Zend/zend_ini_scanner.c: /home/lkq/php/Zend/zend_ini_scanner.l
+	$(LEX) -Pini_ -S/home/lkq/php/Zend/flex.skl -o$@ -i /home/lkq/php/Zend/zend_ini_scanner.l
+
+Zend/zend_indent.lo Zend/zend_highlight.lo Zend/zend_compile.lo: Zend/zend_language_parser.h

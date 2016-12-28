@@ -1,0 +1,2315 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:1653: checking host system type
+configure:1753: checking for gcc
+configure:1866: checking whether the C compiler (gcc  ) works
+configure:1882: gcc -o conftest    conftest.c  1>&5
+configure:1908: checking whether the C compiler (gcc  ) is a cross-compiler
+configure:1913: checking whether we are using GNU C
+configure:1922: gcc -E conftest.c
+configure:1941: checking whether gcc accepts -g
+configure:1974: checking whether gcc and cc understand -c and -o together
+configure:1989: gcc -c conftest.c -o conftest.o 1>&5
+configure:1990: gcc -c conftest.c -o conftest.o 1>&5
+configure:1995: cc -c conftest.c 1>&5
+configure:1997: cc -c conftest.c -o conftest.o 1>&5
+configure:1998: cc -c conftest.c -o conftest.o 1>&5
+configure:2025: checking how to run the C preprocessor
+configure:2046: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:2106: checking for AIX
+configure:2133: checking if compiler supports -R
+configure:2148: gcc -o conftest -g -O2   conftest.c -R /usr/lib  1>&5
+gcc: unrecognized option `-R'
+/usr/lib: file not recognized: Is a directory
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 2141 "configure"
+#include "confdefs.h"
+
+int main() {
+
+; return 0; }
+configure:2166: checking if compiler supports -Wl,-rpath,
+configure:2181: gcc -o conftest -g -O2   conftest.c -Wl,-rpath,/usr/lib  1>&5
+configure:2207: checking for re2c
+configure:2236: checking whether ln -s works
+configure:2261: checking for mawk
+configure:2261: checking for gawk
+configure:2295: checking for bison
+configure:2329: checking bison version
+configure:2339: checking for flex
+configure:2373: checking for yywrap in -lfl
+configure:2392: gcc -o conftest -g -O2   conftest.c -lfl   1>&5
+configure:2416: checking lex output file root
+configure:2437: checking whether yytext is a pointer
+configure:2456: gcc -o conftest -g -O2   conftest.c  -lfl 1>&5
+configure:2480: checking for working const
+configure:2534: gcc -c -g -O2  conftest.c 1>&5
+configure:2559: checking flex version
+configure:2575: checking whether byte ordering is bigendian
+configure:2601: gcc -o conftest -g -O2   conftest.c  1>&5
+configure: failed program was:
+#line 2585 "configure"
+#include "confdefs.h"
+
+int main(void)
+{
+	short one = 1;
+	char *cp = (char *)&one;
+
+	if (*cp == 0) {
+		return(0);
+	} else {
+		return(1);
+	}
+}
+  
+configure:2658: checking whether to force non-PIC code in shared modules
+configure:2775: gcc -o conftest -g -O2   conftest.c  1>&5
+/tmp/ccfXbXPq.o(.text+0x20): In function `main':
+/home/lkq/php/configure:2770: undefined reference to `pthread_mutexattr_init'
+/tmp/ccfXbXPq.o(.text+0x34):/home/lkq/php/configure:2771: undefined reference to `pthread_create'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 2757 "configure"
+#include "confdefs.h"
+
+#include <pthread.h>
+#include <stddef.h>
+
+void *thread_routine(void *data) {
+    return data;
+}
+
+int main() {
+    pthread_t thd;
+    pthread_mutexattr_t mattr;
+    int data = 1;
+    pthread_mutexattr_init(&mattr);
+    return pthread_create(&thd, NULL, thread_routine, &data);
+} 
+configure:2795: checking for pthreads_cflags
+configure:2828: gcc -o conftest -g -O2 -kthread   conftest.c  1>&5
+gcc: unrecognized option `-kthread'
+/tmp/cc8An83X.o(.text+0x20): In function `main':
+/home/lkq/php/configure:2823: undefined reference to `pthread_mutexattr_init'
+/tmp/cc8An83X.o(.text+0x34):/home/lkq/php/configure:2824: undefined reference to `pthread_create'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 2810 "configure"
+#include "confdefs.h"
+
+#include <pthread.h>
+#include <stddef.h>
+
+void *thread_routine(void *data) {
+    return data;
+}
+
+int main() {
+    pthread_t thd;
+    pthread_mutexattr_t mattr;
+    int data = 1;
+    pthread_mutexattr_init(&mattr);
+    return pthread_create(&thd, NULL, thread_routine, &data);
+} 
+configure:2828: gcc -o conftest -g -O2 -pthread   conftest.c  1>&5
+configure:2858: checking for pthreads_lib
+configure:2989: checking for AOLserver support
+configure:3230: checking for Apache 1.x module support via DSO through APXS
+configure:3533: checking for Apache 1.x module support
+configure:4368: checking for mod_charset compatibility option
+configure:4505: checking for Apache 2.0 filter-module support via DSO through APXS
+configure:5327: checking for Apache 2.0 handler-module support via DSO through APXS
+configure:6150: checking for Caudium support
+configure:6480: checking for CLI build
+configure:6540: checking for embedded SAPI library support
+configure:6743: checking for Zeus ISAPI support
+configure:6973: checking for NSAPI support
+configure:7314: checking for PHTTPD support
+configure:7543: checking for Pi3Web support
+configure:7872: checking for Roxen/Pike support
+configure:8141: checking for Servlet support
+configure:8659: checking for thttpd
+configure:8885: checking for TUX
+configure:9119: checking for webjames
+configure:9193: checking for CGI build
+configure:9217: checking whether writing to stdout works
+configure:9246: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:9275: checking whether to force Apache CGI redirect
+configure:9289: checking whether to discard path_info + path_translated
+configure:9302: checking whether to enable path info checking
+configure:9315: checking whether to enable fastcgi support
+configure:9540: checking for chosen SAPI module
+configure:10445: checking for missing declarations of reentrant functions
+configure:10454: gcc -c -g -O2  conftest.c 1>&5
+configure:10479: gcc -c -g -O2  conftest.c 1>&5
+configure:10504: gcc -c -g -O2  conftest.c 1>&5
+configure:10529: gcc -c -g -O2  conftest.c 1>&5
+configure:10554: gcc -c -g -O2  conftest.c 1>&5
+configure:10578: checking for sendmail
+configure:10619: checking whether system uses EBCDIC
+configure:10638: gcc -o conftest -g -O2   conftest.c  1>&5
+configure: failed program was:
+#line 10630 "configure"
+#include "confdefs.h"
+
+int main(void) { 
+  return (unsigned char)'A' != (unsigned char)0xC1; 
+} 
+
+configure:10711: checking for socket
+configure:10739: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:10968: checking for htonl
+configure:10996: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:11225: checking for gethostname
+configure:11253: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:11482: checking for gethostbyaddr
+configure:11510: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:11739: checking for yp_get_default_domain
+configure:11767: gcc -o conftest -g -O2   conftest.c  1>&5
+/tmp/ccgNN2gD.o(.text+0xa): In function `main':
+/home/lkq/php/configure:11761: undefined reference to `yp_get_default_domain'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 11744 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char yp_get_default_domain(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char yp_get_default_domain();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_yp_get_default_domain) || defined (__stub___yp_get_default_domain)
+choke me
+#else
+yp_get_default_domain();
+#endif
+
+; return 0; }
+configure:11785: checking for __yp_get_default_domain
+configure:11813: gcc -o conftest -g -O2   conftest.c  1>&5
+/tmp/ccD7EL0n.o(.text+0xa): In function `main':
+/home/lkq/php/configure:11807: undefined reference to `__yp_get_default_domain'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 11790 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char __yp_get_default_domain(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char __yp_get_default_domain();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub___yp_get_default_domain) || defined (__stub_____yp_get_default_domain)
+choke me
+#else
+__yp_get_default_domain();
+#endif
+
+; return 0; }
+configure:11851: checking for yp_get_default_domain in -lnsl
+configure:11870: gcc -o conftest -g -O2   conftest.c -lnsl   1>&5
+configure:11945: gcc -o conftest -g -O2   conftest.c  -lnsl 1>&5
+configure:11997: checking for dlopen
+configure:12025: gcc -o conftest -g -O2   conftest.c -lnsl  1>&5
+/tmp/ccmvFZgV.o(.text+0xa): In function `main':
+/home/lkq/php/configure:12019: undefined reference to `dlopen'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 12002 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char dlopen(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char dlopen();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_dlopen) || defined (__stub___dlopen)
+choke me
+#else
+dlopen();
+#endif
+
+; return 0; }
+configure:12043: checking for __dlopen
+configure:12071: gcc -o conftest -g -O2   conftest.c -lnsl  1>&5
+/tmp/ccvapOJn.o(.text+0xa): In function `main':
+/home/lkq/php/configure:12065: undefined reference to `__dlopen'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 12048 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char __dlopen(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char __dlopen();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub___dlopen) || defined (__stub_____dlopen)
+choke me
+#else
+__dlopen();
+#endif
+
+; return 0; }
+configure:12109: checking for dlopen in -ldl
+configure:12128: gcc -o conftest -g -O2   conftest.c -ldl  -lnsl  1>&5
+configure:12203: gcc -o conftest -g -O2   conftest.c -lnsl  -ldl 1>&5
+configure:12255: checking for sin in -lm
+configure:12274: gcc -o conftest -g -O2   conftest.c -lm  -ldl -lnsl  1>&5
+configure:12267: warning: conflicting types for built-in function `sin'
+configure:12308: checking for res_search
+configure:12336: gcc -o conftest -g -O2   conftest.c -lm -ldl -lnsl  1>&5
+/tmp/ccG9KVHn.o(.text+0xa): In function `main':
+/home/lkq/php/configure:12330: undefined reference to `res_search'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 12313 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char res_search(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char res_search();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_res_search) || defined (__stub___res_search)
+choke me
+#else
+res_search();
+#endif
+
+; return 0; }
+configure:12354: checking for __res_search
+configure:12382: gcc -o conftest -g -O2   conftest.c -lm -ldl -lnsl  1>&5
+/tmp/cc61WWAZ.o(.text+0xa): In function `main':
+/home/lkq/php/configure:12376: undefined reference to `__res_search'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 12359 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char __res_search(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char __res_search();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub___res_search) || defined (__stub_____res_search)
+choke me
+#else
+__res_search();
+#endif
+
+; return 0; }
+configure:12420: checking for res_search in -lresolv
+configure:12439: gcc -o conftest -g -O2   conftest.c -lresolv  -lm -ldl -lnsl  1>&5
+configure:12514: gcc -o conftest -g -O2   conftest.c -lm -ldl -lnsl  -lresolv 1>&5
+configure:12844: checking for inet_aton
+configure:12872: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:13240: checking for dn_skipname
+configure:13268: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/cc2oTNre.o(.text+0xa): In function `main':
+/home/lkq/php/configure:13262: undefined reference to `dn_skipname'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 13245 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char dn_skipname(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char dn_skipname();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_dn_skipname) || defined (__stub___dn_skipname)
+choke me
+#else
+dn_skipname();
+#endif
+
+; return 0; }
+configure:13286: checking for __dn_skipname
+configure:13314: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:13634: checking for ANSI C header files
+configure:13647: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13714: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:13742: checking for dirent.h that defines DIR
+configure:13755: gcc -c -g -O2  conftest.c 1>&5
+configure:13780: checking for opendir in -ldir
+configure:13799: gcc -o conftest -g -O2   conftest.c -ldir  -lresolv -lm -ldl -lnsl  1>&5
+/usr/bin/ld: cannot find -ldir
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 13788 "configure"
+#include "confdefs.h"
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char opendir();
+
+int main() {
+opendir()
+; return 0; }
+configure:13865: checking for fclose declaration
+configure:13874: gcc -c -g -O2  conftest.c 1>&5
+configure:13951: checking for inttypes.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for stdint.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for dirent.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for ApplicationServices/ApplicationServices.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13957:53: ApplicationServices/ApplicationServices.h: No such file or directory
+configure: failed program was:
+#line 13956 "configure"
+#include "confdefs.h"
+#include <ApplicationServices/ApplicationServices.h>
+configure:13951: checking for sys/param.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for sys/types.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for sys/time.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for netinet/in.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for alloca.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for arpa/inet.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for arpa/nameser.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for assert.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for crypt.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for fcntl.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for grp.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for ieeefp.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13957:20: ieeefp.h: No such file or directory
+configure: failed program was:
+#line 13956 "configure"
+#include "confdefs.h"
+#include <ieeefp.h>
+configure:13951: checking for langinfo.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for limits.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for locale.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for monetary.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for mach-o/dyld.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13957:25: mach-o/dyld.h: No such file or directory
+configure: failed program was:
+#line 13956 "configure"
+#include "confdefs.h"
+#include <mach-o/dyld.h>
+configure:13951: checking for netdb.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for pwd.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for resolv.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for signal.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for stdarg.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for stdlib.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for string.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for syslog.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for sysexits.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for sys/file.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for sys/mman.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for sys/mount.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for sys/poll.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for sys/resource.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for sys/select.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for sys/socket.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for sys/statfs.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for sys/statvfs.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for sys/vfs.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for sys/sysexits.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13957:26: sys/sysexits.h: No such file or directory
+configure: failed program was:
+#line 13956 "configure"
+#include "confdefs.h"
+#include <sys/sysexits.h>
+configure:13951: checking for sys/varargs.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13957:25: sys/varargs.h: No such file or directory
+configure: failed program was:
+#line 13956 "configure"
+#include "confdefs.h"
+#include <sys/varargs.h>
+configure:13951: checking for sys/wait.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for unistd.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for unix.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13957:18: unix.h: No such file or directory
+configure: failed program was:
+#line 13956 "configure"
+#include "confdefs.h"
+#include <unix.h>
+configure:13951: checking for utime.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for sys/utsname.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for sys/ipc.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13951: checking for dlfcn.h
+configure:13961: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:13990: checking for fopencookie
+configure:14018: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:14049: gcc -c -g -O2  conftest.c 1>&5
+configure:14101: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:14162: checking for broken getcwd
+configure:14177: checking for broken libc stdio
+configure:14238: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure: failed program was:
+#line 14210 "configure"
+#include "confdefs.h"
+
+#include <stdio.h>
+int main(int argc, char *argv[])
+{
+  FILE *fp;
+  long position;
+  char *filename = "/tmp/phpglibccheck";
+  
+  fp = fopen(filename, "w");
+  if (fp == NULL) {
+	  perror("fopen");
+	  exit(2);
+  }
+  fputs("foobar", fp);
+  fclose(fp);
+
+  fp = fopen(filename, "a+");
+  position = ftell(fp);
+  fclose(fp);
+  unlink(filename);
+  if (position == 0)
+	return 1;
+  return 0;
+}
+
+configure:14266: checking whether struct tm is in sys/time.h or time.h
+configure:14279: gcc -c -g -O2  conftest.c 1>&5
+configure:14300: checking for tm_zone in struct tm
+configure:14313: gcc -c -g -O2  conftest.c 1>&5
+configure:14372: checking for tm_gmtoff in struct tm
+configure:14385: gcc -c -g -O2  conftest.c 1>&5
+configure:14408: checking for struct flock
+configure:14423: gcc -c -g -O2  conftest.c 1>&5
+configure:14450: checking for socklen_t
+configure:14467: gcc -c -g -O2  conftest.c 1>&5
+configure:14493: checking size of long
+configure:14512: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:14532: checking size of int
+configure:14551: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:14572: checking for st_blksize in struct stat
+configure:14585: gcc -c -g -O2  conftest.c 1>&5
+configure:14607: checking for st_blocks in struct stat
+configure:14620: gcc -c -g -O2  conftest.c 1>&5
+configure:14647: checking for st_rdev in struct stat
+configure:14660: gcc -c -g -O2  conftest.c 1>&5
+configure:14682: checking for size_t
+configure:14715: checking for uid_t in sys/types.h
+configure:14750: checking for struct sockaddr_storage
+configure:14763: gcc -c -g -O2  conftest.c 1>&5
+configure:14795: gcc -c -g -O2  conftest.c 1>&5
+configure: In function `main':
+configure:14791: structure has no member named `sa_len'
+configure: failed program was:
+#line 14785 "configure"
+#include "confdefs.h"
+
+#include <sys/types.h>
+#include <sys/socket.h>
+
+int main() {
+static struct sockaddr sa; int n = (int) sa.sa_len; return n
+; return 0; }
+configure:14808: checking for IPv6 support
+configure:14822: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:14840: checking for vprintf
+configure:14868: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for alphasort
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for asctime_r
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for chroot
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for ctime_r
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for cuserid
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for crypt
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/cco0oFIO.o(.text+0xa): In function `main':
+/home/lkq/php/configure:15034: undefined reference to `crypt'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 15017 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char crypt(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char crypt();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_crypt) || defined (__stub___crypt)
+choke me
+#else
+crypt();
+#endif
+
+; return 0; }
+configure:15012: checking for flock
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for ftok
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for funopen
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/ccIygK6p.o(.text+0xa): In function `main':
+/home/lkq/php/configure:15034: undefined reference to `funopen'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 15017 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char funopen(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char funopen();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_funopen) || defined (__stub___funopen)
+choke me
+#else
+funopen();
+#endif
+
+; return 0; }
+configure:15012: checking for gai_strerror
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for gcvt
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for getlogin
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for getprotobyname
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for getprotobynumber
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for getservbyname
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for getservbyport
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for getrusage
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for gettimeofday
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for gmtime_r
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for isascii
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for link
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for localtime_r
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for lockf
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for lrand48
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for memcpy
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15024: warning: conflicting types for built-in function `memcpy'
+configure:15012: checking for memmove
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for mkstemp
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for mmap
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for nl_langinfo
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for perror
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for poll
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for putenv
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for realpath
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for random
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for rand_r
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for regcomp
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for res_search
+configure:15012: checking for scandir
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for setitimer
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for setlocale
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for localeconv
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for setsockopt
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for setvbuf
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for shutdown
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for sin
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15024: warning: conflicting types for built-in function `sin'
+configure:15012: checking for snprintf
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for srand48
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for srandom
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for statfs
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for statvfs
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for std_syslog
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/cccajrLe.o(.text+0xa): In function `main':
+/home/lkq/php/configure:15034: undefined reference to `std_syslog'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 15017 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char std_syslog(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char std_syslog();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_std_syslog) || defined (__stub___std_syslog)
+choke me
+#else
+std_syslog();
+#endif
+
+; return 0; }
+configure:15012: checking for strcasecmp
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for strcoll
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for strdup
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for strerror
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for strftime
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for strstr
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15024: warning: conflicting types for built-in function `strstr'
+configure:15012: checking for strtok_r
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for symlink
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for tempnam
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/ccytX5e7.o(.text+0xa): In function `main':
+/home/lkq/php/configure:15034: the use of `tempnam' is dangerous, better use `mkstemp'
+configure:15012: checking for tzset
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for unsetenv
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for usleep
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for utime
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15012: checking for vsnprintf
+configure:15040: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15066: checking for getaddrinfo
+configure:15078: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15124: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15156: checking for strlcat
+configure:15184: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/cccrvdOo.o(.text+0xa): In function `main':
+/home/lkq/php/configure:15178: undefined reference to `strlcat'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 15161 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char strlcat(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char strlcat();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_strlcat) || defined (__stub___strlcat)
+choke me
+#else
+strlcat();
+#endif
+
+; return 0; }
+configure:15156: checking for strlcpy
+configure:15184: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/cc8OsxyI.o(.text+0xa): In function `main':
+/home/lkq/php/configure:15178: undefined reference to `strlcpy'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 15161 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char strlcpy(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char strlcpy();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_strlcpy) || defined (__stub___strlcpy)
+choke me
+#else
+strlcpy();
+#endif
+
+; return 0; }
+configure:15156: checking for getopt
+configure:15184: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15211: checking whether utime accepts a null argument
+configure:15232: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15258: checking for working alloca.h
+configure:15291: checking for alloca
+configure:15324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15491: checking for declared timezone
+configure:15512: gcc -c -g -O2  conftest.c 1>&5
+configure:15538: checking for type of reentrant time-related functions
+configure:15567: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure: In function `main':
+configure:15559: warning: assignment makes integer from pointer without a cast
+configure:15560: too many arguments to function `asctime_r'
+configure: failed program was:
+#line 15549 "configure"
+#include "confdefs.h"
+
+#include <time.h>
+
+main() {
+char buf[27];
+struct tm t;
+time_t old = 0;
+int r, s;
+
+s = gmtime_r(&old, &t);
+r = (int) asctime_r(&t, buf, 26);
+if (r == s && s == 0) return (0);
+return (1);
+}
+
+configure:15597: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure: In function `main':
+configure:15590: too many arguments to function `asctime_r'
+configure: failed program was:
+#line 15581 "configure"
+#include "confdefs.h"
+
+#include <time.h>
+main() {
+  struct tm t, *s;
+  time_t old = 0;
+  char buf[27], *p;
+  
+  s = gmtime_r(&old, &t);
+  p = asctime_r(&t, buf, 26);
+  if (p == buf && s == &t) return (0);
+  return (1);
+}
+  
+configure:15635: checking for readdir_r
+configure:15663: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15685: checking for type of readdir_r
+configure:15721: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:15839: checking whether to include debugging symbols
+configure:15872: checking layout of installed files
+configure:15906: checking path to configuration file
+configure:15942: checking directory to be scanned for configuration files
+configure:15972: checking whether to enable safe mode by default
+configure:16007: checking for safe mode exec dir
+configure:16048: checking whether to enable PHP's own SIGCHLD handler
+configure:16085: checking whether to enable magic quotes by default
+configure:16122: checking whether to enable runpaths
+configure:16147: checking whether to explicitly link against libgcc
+configure:16226: checking whether to enable short tags by default
+configure:16263: checking whether to enable dmalloc
+configure:16351: checking whether to enable IPv6 support
+configure:16381: checking whether to enable versioning
+configure:16433: checking for OpenSSL support
+configure:16479: checking for Kerberos support
+configure:17725: checking for ZLIB support
+configure:17771: checking if the location of ZLIB install directory is defined
+configure:18281: checking whether to enable bc style precision math functions
+configure:18575: checking for BZip2 support
+configure:19133: checking whether to enable calendar conversion support
+configure:19412: checking for cpdflib support
+configure:20591: checking for CRACKlib support
+configure:21015: checking whether to enable ctype functions
+configure:21290: checking for CURL support
+configure:22081: checking for cyrus imap support
+configure:23006: checking for xDBM support
+configure:23637: checking whether to enable DBA
+configure:23962: checking for GDBM support
+configure:24267: checking for NDBM support
+configure:24569: checking for Berkeley DB4 support
+configure:24892: checking for Berkeley DB3 support
+configure:25215: checking for Berkeley DB2 support
+configure:25535: checking for DBM support
+configure:25876: checking for CDB support
+configure:25930: checking for INI File support
+configure:25984: checking for FlatFile support
+configure:25999: checking whether to enable DBA interface
+configure:26254: checking whether to enable dbase support
+configure:26529: checking whether to enable dbx support
+configure:26800: checking whether to enable direct I/O support
+configure:27073: checking for DOM support
+configure:27746: checking for DOM XSLT support
+configure:27771: checking for DOM EXSLT support
+configure:28414: checking whether to enable EXIF (metadata from images) support
+configure:28689: checking for FrontBase SQL92 (fbsql) support
+configure:29123: checking for FDF support
+configure:29847: checking whether to enable the bundled filePro support
+configure:30122: checking for FriBidi support
+configure:30577: checking whether to enable FTP support
+configure:30853: checking for GD support
+configure:30900: checking for the location of libjpeg
+configure:30927: checking for the location of libpng
+configure:30980: checking for the location of libXpm
+configure:31005: checking for FreeType 1.x support
+configure:31030: checking for FreeType 2
+configure:31055: checking for T1lib support
+configure:31080: checking whether to enable truetype string function in GD
+configure:31105: checking whether to enable JIS-mapped Japanese font support in GD
+configure:38260: checking for GNU gettext support
+configure:38948: checking for GNU MP support
+configure:39627: checking for hwapi support
+configure:40301: checking for Hyperwave support
+configure:40556: checking for iconv support
+configure:41645: checking for IMAP support
+configure:41691: checking for IMAP Kerberos support
+configure:41716: checking for IMAP SSL support
+configure:43705: checking for Informix support
+configure:44305: checking for Ingres II support
+configure:44825: checking for InterBase support
+configure:45506: checking for IRCG support
+configure:45999: checking for Java support
+configure:46795: checking for LDAP support
+configure:49178: checking whether to enable multibyte string support
+configure:49224: checking whether to enable multibyte regex support
+configure:49249: checking for external libmbfl
+configure:49970: checking for MCAL support
+configure:50379: checking for mcrypt support
+configure:51499: checking for MCVE support
+configure:51545: checking OpenSSL dir for MCVE
+configure:52954: checking for mhash support
+configure:53368: checking whether to include mime_magic support
+configure:53665: checking for MING support
+configure:54344: checking for mnoGoSearch support
+configure:54762: checking for msession support
+configure:55160: checking for mSQL support
+configure:55611: checking for MSSQL support via FreeTDS
+configure:56237: checking for MySQL support
+configure:56283: checking for specified location of the MySQL UNIX socket
+configure:56340: checking for MySQL UNIX socket location
+configure:56387: checking for ranlib
+configure:56415: checking for inline
+configure:56429: gcc -c -g -O2  conftest.c 1>&5
+configure:56455: checking return type of signal handlers
+configure:56477: gcc -c -g -O2  conftest.c 1>&5
+configure:56508: checking for ANSI C header files
+configure:56621: checking for sgtty.h
+configure:56631: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:56621: checking for sys/ioctl.h
+configure:56631: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:56621: checking for fcntl.h
+configure:56621: checking for float.h
+configure:56631: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:56621: checking for floatingpoint.h
+configure:56631: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:56627:27: floatingpoint.h: No such file or directory
+configure: failed program was:
+#line 56626 "configure"
+#include "confdefs.h"
+#include <floatingpoint.h>
+configure:56621: checking for ieeefp.h
+configure:56621: checking for limits.h
+configure:56621: checking for memory.h
+configure:56631: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:56621: checking for pwd.h
+configure:56621: checking for select.h
+configure:56631: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:56627:20: select.h: No such file or directory
+configure: failed program was:
+#line 56626 "configure"
+#include "confdefs.h"
+#include <select.h>
+configure:56621: checking for stdlib.h
+configure:56621: checking for stddef.h
+configure:56631: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:56621: checking for strings.h
+configure:56631: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:56621: checking for string.h
+configure:56621: checking for synch.h
+configure:56631: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:56627:19: synch.h: No such file or directory
+configure: failed program was:
+#line 56626 "configure"
+#include "confdefs.h"
+#include <synch.h>
+configure:56621: checking for sys/mman.h
+configure:56621: checking for sys/socket.h
+configure:56621: checking for sys/timeb.h
+configure:56631: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:56621: checking for sys/types.h
+configure:56621: checking for sys/un.h
+configure:56631: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:56621: checking for sys/vadvise.h
+configure:56631: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:56627:25: sys/vadvise.h: No such file or directory
+configure: failed program was:
+#line 56626 "configure"
+#include "confdefs.h"
+#include <sys/vadvise.h>
+configure:56621: checking for sys/wait.h
+configure:56621: checking for term.h
+configure:56631: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:56621: checking for unistd.h
+configure:56621: checking for utime.h
+configure:56621: checking for sys/utime.h
+configure:56631: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:56627:23: sys/utime.h: No such file or directory
+configure: failed program was:
+#line 56626 "configure"
+#include "confdefs.h"
+#include <sys/utime.h>
+configure:56621: checking for termio.h
+configure:56631: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:56621: checking for termios.h
+configure:56631: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:56621: checking for sched.h
+configure:56631: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:56621: checking for crypt.h
+configure:56621: checking for alloca.h
+configure:56663: checking size of char
+configure:56682: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:56703: checking size of int
+configure:56742: checking size of long
+configure:56781: checking size of long long
+configure:56800: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:56820: checking for size_t
+configure:56853: checking whether time.h and sys/time.h may both be included
+configure:56867: gcc -c -g -O2  conftest.c 1>&5
+configure:56888: checking for uid_t in sys/types.h
+configure:56923: checking for type ulong
+configure:56942: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:56966: checking for type uchar
+configure:56985: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure: In function `main':
+configure:56979: `uchar' undeclared (first use in this function)
+configure:56979: (Each undeclared identifier is reported only once
+configure:56979: for each function it appears in.)
+configure:56979: parse error before "foo"
+configure:56980: `foo' undeclared (first use in this function)
+configure: failed program was:
+#line 56974 "configure"
+#include "confdefs.h"
+#include <stdio.h>
+#include <sys/types.h>
+main()
+{
+  uchar foo;
+  foo++;
+  exit(0);
+}
+configure:57009: checking for type uint
+configure:57028: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57052: checking for type ushort
+configure:57071: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57095: checking for int8
+configure:57125: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure: In function `main':
+configure:57119: `int8' undeclared (first use in this function)
+configure:57119: (Each undeclared identifier is reported only once
+configure:57119: for each function it appears in.)
+configure:57119: parse error before "i"
+configure: failed program was:
+#line 57103 "configure"
+#include "confdefs.h"
+
+#ifdef HAVE_STDLIB_H
+#include <stdlib.h>
+#endif
+
+#ifdef HAVE_STDDEF_H
+#include <stddef.h>
+#endif
+
+#ifdef HAVE_SYS_TYPES_H
+#include <sys/types.h>
+#endif
+
+int main()
+{
+    int8 i;
+    return 0;
+}
+
+configure:57151: checking base type of last arg to accept
+configure:57179: g++ -c   conftest.C 1>&5
+configure:57228: checking return type of qsort
+configure:57246: gcc -c -g -O2  conftest.c 1>&5
+configure:57296: checking for alarm
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for bmove
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/cccMBEll.o(.text+0xa): In function `main':
+/home/lkq/php/configure:57318: undefined reference to `bmove'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 57301 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char bmove(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char bmove();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_bmove) || defined (__stub___bmove)
+choke me
+#else
+bmove();
+#endif
+
+; return 0; }
+configure:57296: checking for chsize
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/ccSSD25Y.o(.text+0xa): In function `main':
+/home/lkq/php/configure:57318: undefined reference to `chsize'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 57301 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char chsize(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char chsize();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_chsize) || defined (__stub___chsize)
+choke me
+#else
+chsize();
+#endif
+
+; return 0; }
+configure:57296: checking for ftruncate
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for rint
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for finite
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for fpsetmask
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/ccc3vT5D.o(.text+0xa): In function `main':
+/home/lkq/php/configure:57318: undefined reference to `fpsetmask'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 57301 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char fpsetmask(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char fpsetmask();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_fpsetmask) || defined (__stub___fpsetmask)
+choke me
+#else
+fpsetmask();
+#endif
+
+; return 0; }
+configure:57296: checking for fpresetsticky
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/ccMGdJEh.o(.text+0xa): In function `main':
+/home/lkq/php/configure:57318: undefined reference to `fpresetsticky'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 57301 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char fpresetsticky(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char fpresetsticky();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_fpresetsticky) || defined (__stub___fpresetsticky)
+choke me
+#else
+fpresetsticky();
+#endif
+
+; return 0; }
+configure:57296: checking for cuserid
+configure:57296: checking for fcntl
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for fconvert
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/ccEC1bCn.o(.text+0xa): In function `main':
+/home/lkq/php/configure:57318: undefined reference to `fconvert'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 57301 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char fconvert(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char fconvert();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_fconvert) || defined (__stub___fconvert)
+choke me
+#else
+fconvert();
+#endif
+
+; return 0; }
+configure:57296: checking for getrusage
+configure:57296: checking for getpwuid
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for getcwd
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for getrlimit
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for getwd
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/ccaZynaP.o(.text+0xa): In function `main':
+/home/lkq/php/configure:57318: the `getwd' function is dangerous and should not be used.
+configure:57296: checking for index
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57308: warning: conflicting types for built-in function `index'
+configure:57296: checking for locking
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/cccJRBoS.o(.text+0xa): In function `main':
+/home/lkq/php/configure:57318: undefined reference to `locking'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 57301 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char locking(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char locking();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_locking) || defined (__stub___locking)
+choke me
+#else
+locking();
+#endif
+
+; return 0; }
+configure:57296: checking for longjmp
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for perror
+configure:57296: checking for pread
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for realpath
+configure:57296: checking for rename
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for socket
+configure:57296: checking for strnlen
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for madvise
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for strtoll
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for strtoul
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for strtoull
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for snprintf
+configure:57296: checking for tempnam
+configure:57296: checking for thr_setconcurrency
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/ccuu9grE.o(.text+0xa): In function `main':
+/home/lkq/php/configure:57318: undefined reference to `thr_setconcurrency'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 57301 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char thr_setconcurrency(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char thr_setconcurrency();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_thr_setconcurrency) || defined (__stub___thr_setconcurrency)
+choke me
+#else
+thr_setconcurrency();
+#endif
+
+; return 0; }
+configure:57296: checking for gethostbyaddr_r
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for gethostbyname_r
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for getpwnam
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for bfill
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/ccm4tUP0.o(.text+0xa): In function `main':
+/home/lkq/php/configure:57318: undefined reference to `bfill'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 57301 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char bfill(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char bfill();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_bfill) || defined (__stub___bfill)
+choke me
+#else
+bfill();
+#endif
+
+; return 0; }
+configure:57296: checking for bzero
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57308: warning: conflicting types for built-in function `bzero'
+configure:57296: checking for bcmp
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57308: warning: conflicting types for built-in function `bcmp'
+configure:57296: checking for strstr
+configure:57296: checking for strpbrk
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57308: warning: conflicting types for built-in function `strpbrk'
+configure:57296: checking for strerror
+configure:57296: checking for tell
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/ccaMRPuy.o(.text+0xa): In function `main':
+/home/lkq/php/configure:57318: undefined reference to `tell'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 57301 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char tell(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char tell();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_tell) || defined (__stub___tell)
+choke me
+#else
+tell();
+#endif
+
+; return 0; }
+configure:57296: checking for atod
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/cc850hYb.o(.text+0xa): In function `main':
+/home/lkq/php/configure:57318: undefined reference to `atod'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 57301 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char atod(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char atod();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_atod) || defined (__stub___atod)
+choke me
+#else
+atod();
+#endif
+
+; return 0; }
+configure:57296: checking for memcpy
+configure:57296: checking for memmove
+configure:57296: checking for setupterm
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/ccOll4vH.o(.text+0xa): In function `main':
+/home/lkq/php/configure:57318: undefined reference to `setupterm'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 57301 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char setupterm(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char setupterm();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_setupterm) || defined (__stub___setupterm)
+choke me
+#else
+setupterm();
+#endif
+
+; return 0; }
+configure:57296: checking for strcasecmp
+configure:57296: checking for sighold
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for vidattr
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/ccMbvQA9.o(.text+0xa): In function `main':
+/home/lkq/php/configure:57318: undefined reference to `vidattr'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 57301 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char vidattr(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char vidattr();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_vidattr) || defined (__stub___vidattr)
+choke me
+#else
+vidattr();
+#endif
+
+; return 0; }
+configure:57296: checking for setupterm
+configure:57296: checking for lrand48
+configure:57296: checking for localtime_r
+configure:57296: checking for sigset
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for sigthreadmask
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/ccojSG0u.o(.text+0xa): In function `main':
+/home/lkq/php/configure:57318: undefined reference to `sigthreadmask'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 57301 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char sigthreadmask(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char sigthreadmask();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_sigthreadmask) || defined (__stub___sigthreadmask)
+choke me
+#else
+sigthreadmask();
+#endif
+
+; return 0; }
+configure:57296: checking for pthread_sigmask
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/ccWttoA8.o(.text+0xa): In function `main':
+/home/lkq/php/configure:57318: undefined reference to `pthread_sigmask'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 57301 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char pthread_sigmask(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char pthread_sigmask();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_pthread_sigmask) || defined (__stub___pthread_sigmask)
+choke me
+#else
+pthread_sigmask();
+#endif
+
+; return 0; }
+configure:57296: checking for pthread_setprio
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/ccUguO7s.o(.text+0xa): In function `main':
+/home/lkq/php/configure:57318: undefined reference to `pthread_setprio'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 57301 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char pthread_setprio(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char pthread_setprio();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_pthread_setprio) || defined (__stub___pthread_setprio)
+choke me
+#else
+pthread_setprio();
+#endif
+
+; return 0; }
+configure:57296: checking for pthread_setprio_np
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/ccMtele7.o(.text+0xa): In function `main':
+/home/lkq/php/configure:57318: undefined reference to `pthread_setprio_np'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 57301 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char pthread_setprio_np(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char pthread_setprio_np();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_pthread_setprio_np) || defined (__stub___pthread_setprio_np)
+choke me
+#else
+pthread_setprio_np();
+#endif
+
+; return 0; }
+configure:57296: checking for pthread_setschedparam
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for pthread_attr_setprio
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/cc1TM0Mj.o(.text+0xa): In function `main':
+/home/lkq/php/configure:57318: undefined reference to `pthread_attr_setprio'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 57301 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char pthread_attr_setprio(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char pthread_attr_setprio();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_pthread_attr_setprio) || defined (__stub___pthread_attr_setprio)
+choke me
+#else
+pthread_attr_setprio();
+#endif
+
+; return 0; }
+configure:57296: checking for pthread_attr_setschedparam
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for pthread_attr_create
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/ccWrX1Ir.o(.text+0xa): In function `main':
+/home/lkq/php/configure:57318: undefined reference to `pthread_attr_create'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 57301 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char pthread_attr_create(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char pthread_attr_create();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_pthread_attr_create) || defined (__stub___pthread_attr_create)
+choke me
+#else
+pthread_attr_create();
+#endif
+
+; return 0; }
+configure:57296: checking for pthread_getsequence_np
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/ccUFxyg5.o(.text+0xa): In function `main':
+/home/lkq/php/configure:57318: undefined reference to `pthread_getsequence_np'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 57301 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char pthread_getsequence_np(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char pthread_getsequence_np();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_pthread_getsequence_np) || defined (__stub___pthread_getsequence_np)
+choke me
+#else
+pthread_getsequence_np();
+#endif
+
+; return 0; }
+configure:57296: checking for pthread_attr_setstacksize
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/cc4Otw0p.o(.text+0xa): In function `main':
+/home/lkq/php/configure:57318: undefined reference to `pthread_attr_setstacksize'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 57301 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char pthread_attr_setstacksize(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char pthread_attr_setstacksize();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_pthread_attr_setstacksize) || defined (__stub___pthread_attr_setstacksize)
+choke me
+#else
+pthread_attr_setstacksize();
+#endif
+
+; return 0; }
+configure:57296: checking for pthread_condattr_create
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/ccsSAxP3.o(.text+0xa): In function `main':
+/home/lkq/php/configure:57318: undefined reference to `pthread_condattr_create'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 57301 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char pthread_condattr_create(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char pthread_condattr_create();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_pthread_condattr_create) || defined (__stub___pthread_condattr_create)
+choke me
+#else
+pthread_condattr_create();
+#endif
+
+; return 0; }
+configure:57296: checking for rwlock_init
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/ccsTitzH.o(.text+0xa): In function `main':
+/home/lkq/php/configure:57318: undefined reference to `rwlock_init'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 57301 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char rwlock_init(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char rwlock_init();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_rwlock_init) || defined (__stub___rwlock_init)
+choke me
+#else
+rwlock_init();
+#endif
+
+; return 0; }
+configure:57296: checking for crypt
+configure:57296: checking for dlopen
+configure:57296: checking for dlerror
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for fchmod
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for getpass
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57296: checking for getpassphrase
+configure:57324: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+/tmp/ccO4SEJm.o(.text+0xa): In function `main':
+/home/lkq/php/configure:57318: undefined reference to `getpassphrase'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 57301 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char getpassphrase(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char getpassphrase();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_getpassphrase) || defined (__stub___getpassphrase)
+choke me
+#else
+getpassphrase();
+#endif
+
+; return 0; }
+configure:57353: checking for strtok_r
+configure:57410: checking style of gethostname_r routines
+configure:57445: g++ -c   conftest.C 1>&5
+configure:57477: checking 3 argument to gethostname_r routines
+configure:57511: g++ -c   conftest.C 1>&5
+configure: In function `int main()':
+configure:57507: `hostent_data' undeclared (first use this function)
+configure:57507: (Each undeclared identifier is reported only once for each 
+   function it appears in.)
+configure:57507: parse error before `)' token
+configure: failed program was:
+#line 57494 "configure"
+#include "confdefs.h"
+#if !defined(SCO) && !defined(__osf__)
+#define _REENTRANT
+#endif
+#include <pthread.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <netdb.h>
+int main() {
+int skr;
+
+ skr = gethostbyname_r((const char *) 0, (struct hostent*) 0, (hostent_data*) 0);
+; return 0; }
+configure:57544: checking args to pthread_getspecific
+configure:57561: gcc -c -g -O2  conftest.c 1>&5
+configure:57585: checking args to pthread_mutex_init
+configure:57604: gcc -c -g -O2  conftest.c 1>&5
+configure:57628: checking args to readdir_r
+configure:57646: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:57670: checking style of sigwait
+configure:57691: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:59551: checking for ncurses support
+configure:60536: checking for Oracle (OCI8) support using ORACLE_HOME installation
+configure:60583: checking for Oracle (OCI8) support using Oracle Instant Client
+configure:63067: checking for Adabas support
+configure:63260: checking for SAP DB support
+configure:63390: checking for Solid support
+configure:63534: checking for IBM DB2 support
+configure:63606: checking for Empress support
+configure:63676: checking for Empress local access support
+configure:63762: checking for Birdstep support
+configure:63826: checking for a custom ODBC support
+configure:63860: checking for iODBC support
+configure:64002: checking for Easysoft ODBC-ODBC Bridge support
+configure:64062: checking for unixODBC support
+configure:64122: checking for DBMaker support
+configure:64640: checking for Oracle-ORACLE support
+configure:69673: checking whether to enable user-space object overloading support
+configure:69948: checking for Ovrimos SQL Server support
+configure:70407: checking whether to enable pcntl support
+configure:70858: checking for PCRE support
+configure:71524: checking for PDFlib support
+configure:71651: checking for the location of libtiff
+configure:73109: checking for Verisign Payflow Pro support
+configure:73822: checking for PostgreSQL support
+configure:74546: checking whether to enable POSIX-like functions
+configure:74819: checking for seteuid
+configure:74847: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:74819: checking for setegid
+configure:74847: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:74819: checking for setsid
+configure:74847: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:74819: checking for getsid
+configure:74847: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:74819: checking for setpgid
+configure:74847: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:74819: checking for getpgid
+configure:74847: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:74819: checking for ctermid
+configure:74847: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:74819: checking for mkfifo
+configure:74847: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:74819: checking for getrlimit
+configure:74877: checking for PSPELL support
+configure:75532: checking for QtDOM support
+configure:76150: checking for libedit readline replacement
+configure:76196: checking for readline support
+configure:77737: checking for recode support
+configure:78471: checking whether to enable PHP sessions
+configure:78517: checking for mm support
+configure:78542: checking whether pwrite works
+configure:78575: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:78662: checking whether pread works
+configure:78695: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:79157: checking whether to enable shmop support
+configure:79432: checking for SNMP support
+configure:79478: checking OpenSSL dir for SNMP
+configure:81093: checking whether to enable UCD SNMP hack
+configure:81119: checking whether to enable sockets support
+configure:81557: checking for getcwd
+configure:81557: checking for getwd
+configure:81557: checking for asinh
+configure:81585: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:81557: checking for acosh
+configure:81585: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:81557: checking for atanh
+configure:81585: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:81557: checking for log1p
+configure:81585: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:81557: checking for hypot
+configure:81585: gcc -o conftest -g -O2   conftest.c -lresolv -lm -ldl -lnsl  1>&5
+configure:81614: checking for crypt in -lcrypt
+configure:81633: gcc -o conftest -g -O2   conftest.c -lcrypt  -lresolv -lm -ldl -lnsl  1>&5
+configure:81662: checking for standard DES crypt
+configure:81692: gcc -o conftest -g -O2   conftest.c -lcrypt -lresolv -lm -ldl -lnsl  -lcrypt 1>&5
+configure:81723: checking for extended DES crypt
+configure:81753: gcc -o conftest -g -O2   conftest.c -lcrypt -lresolv -lm -ldl -lnsl  -lcrypt 1>&5
+configure: failed program was:
+#line 81734 "configure"
+#include "confdefs.h"
+
+#if HAVE_UNISTD_H
+#include <unistd.h>
+#endif
+
+#if HAVE_CRYPT_H
+#include <crypt.h>
+#endif
+
+main() {
+#if HAVE_CRYPT
+    exit (strcmp((char *)crypt("rasmuslerdorf","_J9..rasm"),"_J9..rasmBYk8r9AiWNc"));
+#else
+	exit(0);
+#endif
+}
+configure:81784: checking for MD5 crypt
+configure:81823: gcc -o conftest -g -O2   conftest.c -lcrypt -lresolv -lm -ldl -lnsl  -lcrypt 1>&5
+configure:81883: checking for Blowfish crypt
+configure:81919: gcc -o conftest -g -O2   conftest.c -lcrypt -lresolv -lm -ldl -lnsl  -lcrypt 1>&5
+configure: failed program was:
+#line 81894 "configure"
+#include "confdefs.h"
+
+#if HAVE_UNISTD_H
+#include <unistd.h>
+#endif
+
+#if HAVE_CRYPT_H
+#include <crypt.h>
+#endif
+
+main() {
+#if HAVE_CRYPT
+    char salt[30], answer[70];
+    
+    salt[0]='$'; salt[1]='2'; salt[2]='a'; salt[3]='$'; salt[4]='0'; salt[5]='7'; salt[6]='$'; salt[7]='\0';
+    strcat(salt,"rasmuslerd............");
+    strcpy(answer,salt);
+    strcpy(&answer[29],"nIdrcHdxcUxWomQX9j6kvERCFjTg7Ra");
+    exit (strcmp((char *)crypt("rasmuslerdorf",salt),answer));
+#else
+	exit(0);
+#endif
+}
+configure:81951: checking whether flush should be called explicitly after a buffered io
+configure:82000: gcc -o conftest -g -O2   conftest.c -lcrypt -lresolv -lm -ldl -lnsl  -lcrypt 1>&5
+/tmp/ccKSaTym.o(.text+0x12): In function `main':
+/home/lkq/php/configure:81969: the use of `tmpnam' is dangerous, better use `mkstemp'
+configure:82119: checking which regex library to use
+configure:82124: checking whether rounding works as expected
+configure:82141: gcc -o conftest -g -O2   conftest.c -lcrypt -lresolv -lm -ldl -lnsl  -lcrypt 1>&5
+configure: failed program was:
+#line 82132 "configure"
+#include "confdefs.h"
+
+#include <math.h>
+  int main() {
+    return floor(0.045*pow(10,2) + 0.5)/10.0 != 0.5;
+  }
+
+configure:82165: checking for working fnmatch
+configure:82180: gcc -o conftest -g -O2   conftest.c -lcrypt -lresolv -lm -ldl -lnsl  -lcrypt 1>&5
+configure:82207: checking for glob
+configure:82235: gcc -o conftest -g -O2   conftest.c -lcrypt -lresolv -lm -ldl -lnsl  -lcrypt 1>&5
+configure:82207: checking for strfmon
+configure:82235: gcc -o conftest -g -O2   conftest.c -lcrypt -lresolv -lm -ldl -lnsl  -lcrypt 1>&5
+configure:82270: checking for fpclass
+configure:82298: gcc -o conftest -g -O2   conftest.c -lcrypt -lresolv -lm -ldl -lnsl  -lcrypt 1>&5
+/tmp/ccKmYiE7.o(.text+0xa): In function `main':
+/home/lkq/php/configure:82292: undefined reference to `fpclass'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 82275 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char fpclass(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char fpclass();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_fpclass) || defined (__stub___fpclass)
+choke me
+#else
+fpclass();
+#endif
+
+; return 0; }
+configure:82270: checking for isinf
+configure:82298: gcc -o conftest -g -O2   conftest.c -lcrypt -lresolv -lm -ldl -lnsl  -lcrypt 1>&5
+configure:82270: checking for isnan
+configure:82298: gcc -o conftest -g -O2   conftest.c -lcrypt -lresolv -lm -ldl -lnsl  -lcrypt 1>&5
+configure:82324: checking whether atof() accepts NAN
+configure:82355: gcc -o conftest -g -O2   conftest.c -lcrypt -lresolv -lm -ldl -lnsl  -lcrypt 1>&5
+configure:82383: checking whether atof() accepts INF
+configure:82417: gcc -o conftest -g -O2   conftest.c -lcrypt -lresolv -lm -ldl -lnsl  -lcrypt 1>&5
+configure:82445: checking whether HUGE_VAL == INF
+configure:82479: gcc -o conftest -g -O2   conftest.c -lcrypt -lresolv -lm -ldl -lnsl  -lcrypt 1>&5
+configure:82507: checking whether HUGE_VAL + -HUGEVAL == NAN
+configure:82543: gcc -o conftest -g -O2   conftest.c -lcrypt -lresolv -lm -ldl -lnsl  -lcrypt 1>&5
+configure:82839: checking for libswf support
+configure:83266: checking for Sybase support
+configure:83867: checking for Sybase-CT support
+configure:84833: checking whether to enable System V IPC support
+configure:85108: checking whether to enable System V semaphore support
+configure:85429: checking whether to enable System V shared memory support
+configure:85705: checking whether to enable tokenizer support
+configure:85982: checking whether to enable WDDX support
+configure:86259: checking whether byte ordering is bigendian
+configure:86318: checking whether to enable XML support
+configure:86364: checking external libexpat install dir
+configure:87047: checking for XMLRPC-EPI support
+configure:87093: checking libexpat dir for XMLRPC-EPI
+configure:87118: checking iconv dir for XMLRPC-EPI
+configure:88760: checking whether to enable xslt support
+configure:88806: checking for XSLT Sablotron backend
+configure:88831: checking for libexpat dir for Sablotron XSL support
+configure:88856: checking for iconv dir for Sablotron XSL support
+configure:88881: checking for JavaScript for Sablotron XSL support
+configure:90600: checking for YAZ support
+configure:91124: checking whether to include YP support
+configure:91605: checking for ZIP support
+configure:92230: checking whether to install PEAR
+configure:92336: checking bison version
+configure:92371: checking for inttypes.h
+configure:92371: checking for stdint.h
+configure:92371: checking for limits.h
+configure:92371: checking for malloc.h
+configure:92381: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:92371: checking for string.h
+configure:92371: checking for unistd.h
+configure:92371: checking for stdarg.h
+configure:92371: checking for sys/types.h
+configure:92371: checking for sys/time.h
+configure:92371: checking for signal.h
+configure:92371: checking for unix.h
+configure:92371: checking for mach-o/dyld.h
+configure:92371: checking for dlfcn.h
+configure:92409: checking for size_t
+configure:92442: checking return type of signal handlers
+configure:92484: checking for uint
+configure:92517: checking for ulong
+configure:92552: checking for int32_t
+configure:92573: gcc -c -g -O2  conftest.c 1>&5
+configure:92592: checking for uint32_t
+configure:92613: gcc -c -g -O2  conftest.c 1>&5
+configure:92632: checking for vprintf
+configure:92737: checking for 8-bit clean memcmp
+configure:92755: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:92775: checking for working alloca.h
+configure:92808: checking for alloca
+configure:93009: checking for memcpy
+configure:93009: checking for strdup
+configure:93009: checking for getpid
+configure:93037: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:93009: checking for kill
+configure:93037: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:93009: checking for strtod
+configure:93037: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:93009: checking for strtol
+configure:93037: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:93009: checking for finite
+configure:93009: checking for fpclass
+configure:93065: checking for finite
+configure:93065: checking for isfinite
+configure:93093: gcc -o conftest -g -O2   conftest.c  1>&5
+/tmp/cce17lGg.o(.text+0xa): In function `main':
+/home/lkq/php/configure:93087: undefined reference to `isfinite'
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 93070 "configure"
+#include "confdefs.h"
+/* System header to define __stub macros and hopefully few prototypes,
+    which can conflict with char isfinite(); below.  */
+#include <assert.h>
+/* Override any gcc2 internal prototype to avoid an error.  */
+/* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+char isfinite();
+
+int main() {
+
+/* The GNU C library defines this for functions which it implements
+    to always fail with ENOSYS.  Some functions are actually named
+    something starting with __ and the normal name is an alias.  */
+#if defined (__stub_isfinite) || defined (__stub___isfinite)
+choke me
+#else
+isfinite();
+#endif
+
+; return 0; }
+configure:93065: checking for isinf
+configure:93065: checking for isnan
+configure:93120: checking whether fp_except is defined
+configure:93137: gcc -c -g -O2  conftest.c 1>&5
+configure:93128:27: floatingpoint.h: No such file or directory
+configure: In function `main':
+configure:93132: `fp_except' undeclared (first use in this function)
+configure:93132: (Each undeclared identifier is reported only once
+configure:93132: for each function it appears in.)
+configure:93132: parse error before "x"
+configure: failed program was:
+#line 93126 "configure"
+#include "confdefs.h"
+
+#include <floatingpoint.h>
+
+int main() {
+
+fp_except x = (fp_except) 0;
+
+; return 0; }
+configure:93167: checking for dlfcn.h
+configure:93206: checking whether dlsym() requires a leading underscore in symbol names
+configure:93274: gcc -o conftest -g -O2   conftest.c  1>&5
+/tmp/cc84hZlw.o(.text+0x1b): In function `main':
+/home/lkq/php/configure:93260: undefined reference to `dlopen'
+/tmp/cc84hZlw.o(.text+0x34):/home/lkq/php/configure:93265: undefined reference to `dlsym'
+/tmp/cc84hZlw.o(.text+0x52):/home/lkq/php/configure:93266: undefined reference to `dlsym'
+collect2: ld returned 1 exit status
+configure:93357: checking whether to enable thread-safety
+configure:93361: checking whether to enable inline optimization for GCC
+configure:93365: checking whether to enable a memory limit
+configure:93369: checking whether to enable Zend debugging
+configure:93373: checking whether to enable Zend multibyte
+configure:93433: checking for inline
+configure:93517: checking for stdarg.h
+configure:94416: checking for Cygwin environment
+configure:94432: gcc -c -g -O2  conftest.c 1>&5
+configure: In function `main':
+configure:94428: `__CYGWIN32__' undeclared (first use in this function)
+configure:94428: (Each undeclared identifier is reported only once
+configure:94428: for each function it appears in.)
+configure: failed program was:
+#line 94421 "configure"
+#include "confdefs.h"
+
+int main() {
+
+#ifndef __CYGWIN__
+#define __CYGWIN__ __CYGWIN32__
+#endif
+return __CYGWIN__;
+; return 0; }
+configure:94449: checking for mingw32 environment
+configure:94461: gcc -c -g -O2  conftest.c 1>&5
+configure: In function `main':
+configure:94457: `__MINGW32__' undeclared (first use in this function)
+configure:94457: (Each undeclared identifier is reported only once
+configure:94457: for each function it appears in.)
+configure: failed program was:
+#line 94454 "configure"
+#include "confdefs.h"
+
+int main() {
+return __MINGW32__;
+; return 0; }
+configure:94547: checking build system type
+configure:94576: checking for ld used by GCC
+configure:94644: checking if the linker (/usr/bin/ld) is GNU ld
+GNU ld version 2.13.90.0.18 20030206
+configure:94661: checking for /usr/bin/ld option to reload object files
+configure:94673: checking for BSD-compatible nm
+configure:94711: checking for a sed that does not truncate output
+configure:94795: checking how to recognise dependent libraries
+configure:94982: checking for object suffix
+configure:94988: gcc -c -g -O2  conftest.c 1>&5
+configure:95008: checking for executable suffix
+configure:95018: gcc -o conftest -g -O2    conftest.c  1>&5
+configure:95049: checking command to parse /usr/bin/nm -B output
+configure:95132: gcc -c -g -O2  conftest.c 1>&5
+configure:95135: /usr/bin/nm -B conftest.o | sed -n -e 's/^.*[ ]\([ABCDGISTW][ABCDGISTW]*\)[ ][ ]*\(\)\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2\3 \3/p' > conftest.nm
+configure:95186: gcc -o conftest -g -O2    conftest.c conftstm.o 1>&5
+configure:95373: checking for ranlib
+configure:95440: checking for strip
+configure:95685: checking for objdir
+configure:95716: checking for gcc option to produce PIC
+configure:95864: checking if gcc PIC flag -fPIC works
+configure:95878: gcc -c -g -O2 -fPIC -DPIC  conftest.c 1>&5
+configure:95934: checking if gcc static flag -static works
+configure:95949: gcc -o conftest -g -O2    -static conftest.c  1>&5
+configure:95980: checking if gcc supports -c -o file.o
+configure:95999: gcc -c -g -O2 -o out/conftest2.o  conftest.c 1>&5
+configure:96028: checking if gcc supports -c -o file.lo
+configure:96046: gcc -c -g -O2 -c -o conftest.lo  conftest.c 1>&5
+configure:96104: checking if gcc supports -fno-rtti -fno-exceptions
+configure:96117: gcc -c -g -O2 -fno-rtti -fno-exceptions -c conftest.c  conftest.c 1>&5
+configure:96148: checking whether the linker (/usr/bin/ld) supports shared libraries
+configure:96839: checking how to hardcode library paths into programs
+configure:96871: checking whether stripping libraries is possible
+configure:96889: checking dynamic linker characteristics
+configure:97324: checking if libtool supports shared libraries
+configure:97332: checking whether to build shared libraries
+configure:97359: checking whether to build static libraries
